@@ -6,9 +6,9 @@
 * @height: the height of the array
 * Return: a pointer to the array, or NULL on failure
 */
-int [**alloc_grid(int width, int height)
+int **alloc_grid(int width, int height) /* corrected function declaration */
 {
-int **](https://www.bing.com/search?form=SKPBOT&q=alloc_grid%28int%20width%2C%20int%20height%29%0D%0A%7B%0D%0Aint%20)grid;
+int **grid;
 int i, j;
 
 /* check for valid width and height */
