@@ -1,14 +1,24 @@
+#ifndef STRTYP
+#define STRTYP
+
 /**
-* struct dog - a structure to represent a dog
-* @name: the name of the dog
-* @age: the age of the dog in years
-* @owner: the name of the owner of the dog
-*
-* This structure contains three elements: name, age and owner of the dog.
-* The name and owner are pointers to char arrays, and the age is a float value.
-*/
-struct dog {
-char *name;
-float age;
-char *owner;
+  *struct dog - structure of a dog.
+  *@name: name of dog.
+  *@age: age of dog.
+  *@owner: owner of dog.
+  */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
 };
+
+typedef struct dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif /*STRTYP*/
